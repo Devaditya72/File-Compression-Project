@@ -1,7 +1,7 @@
-# File-Compression-Project
+## File-Compression-Project
 File Compression program using Huffman Coding in Python
 
-How Huffman Coding works?
+#How Huffman Coding works?
 Suppose the string below is to be sent over a network.
 Each character occupies 8 bits. There are a total of 15 characters in the above string. 
 Thus, a total of 8 * 15 = 120 bits are required to send this string. Using the Huffman Coding technique, we can compress the string to a smaller size.
@@ -21,20 +21,20 @@ huffman coding.
 
 Assign 0 to the left edge and 1 to the right edge
 For sending the above string over a network, we have to send the tree as well as the above compressed-code. The total size is given by the table below.
-***
+
  
 
-Character	        Frequency    	Code	   Size
-A             	     5	         11	      5*2 = 10
-B	                   1	         100	    1*3 = 3
-C	                   6	          0	      6*1 = 6
-D	                   3	         101	    3*3 = 9
-4 * 8 = 32 bits	     15 bits	 	          28 bits
+Character	        Frequency    	Code	     Size
+A             	     5	           11	      5*2 = 10
+B	                   1	         100	      1*3 = 3
+C	                   6	          0	       6*1 = 6
+D	                   3	         101	      3*3 = 9
+4 * 8 = 32 bits	     15 bits	 	           28 bits
  
 
 Without encoding, the total size of the string was 120 bits. After encoding the size is reduced to 32 + 15 + 28 = 75.
 
-Algorithm used for the steps above
+##Algorithm used for the steps above
 
 ->create a priority queue Q consisting of each unique character.
 ->sort then in ascending order of their frequencies.
