@@ -12,12 +12,12 @@ It's is done with the help of the following steps.
 1. Calculate the frequency of each character in the string.
 2. Sort the characters in increasing order of the frequency. These are stored in a priority queue Q.
 huffman coding.
-3.Make each unique character as a leaf node.
-4.Create an empty node z. Assign the minimum frequency to the left child of z and assign the second minimum frequency to the right child of z. Set the value of the z as the sum of the above two minimum frequencies.
-5.Remove these two minimum frequencies from Q and add the sum into the list of frequencies.
-6.Insert node z into the tree.
-7.Repeat steps 3 to 5 for all the characters.
-8.For each non-leaf node, assign 0 to the left edge and 1 to the right edge.
+3. Make each unique character as a leaf node.
+4. Create an empty node z. Assign the minimum frequency to the left child of z and assign the second minimum frequency to the right child of z. Set the value of the z as the sum of the above two minimum frequencies.
+5. Remove these two minimum frequencies from Q and add the sum into the list of frequencies.
+6. Insert node z into the tree.
+7. Repeat steps 3 to 5 for all the characters.
+8. For each non-leaf node, assign 0 to the left edge and 1 to the right edge.
 
 Assign 0 to the left edge and 1 to the right edge
 For sending the above string over a network, we have to send the tree as well as the above compressed-code. The total size is given by the table below.
@@ -25,11 +25,11 @@ For sending the above string over a network, we have to send the tree as well as
  
 
 Character	        Frequency    	Code	     Size
-A             	     5	           11	      5*2 = 10
-B	                   1	         100	      1*3 = 3
-C	                   6	          0	       6*1 = 6
-D	                   3	         101	      3*3 = 9
-4 * 8 = 32 bits	     15 bits	 	           28 bits
+   A           	     5	           11	      5*2 = 10
+   B                 1	         100	      1*3 = 3
+   C                 6	          0	       6*1 = 6
+   D                 3	         101	      3*3 = 9
+ 4 * 8 = 32 bits	     15 bits	 	           28 bits
  
  
 Without encoding, the total size of the string was 120 bits. After encoding the size is reduced to 32 + 15 + 28 = 75.
